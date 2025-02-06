@@ -1,29 +1,28 @@
-from cryptography.hazmat.primitives import serialization
-from cryptography.hazmat.primitives.asymmetric import rsa
-from cryptography.hazmat.primitives.asymmetric import padding
-from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives import serialization, hashes
+from cryptography.hazmat.primitives.asymmetric import rsa, padding
+import base64
 
 class CifradorExtremoAExtremo:
-
     def __init__(self):
-        # Generar un par de claves
-        self.clave_publica, self.clave_privada = self.generar_claves()
+        # Generar par de claves inicial
+        self.generar_nuevas_claves()
 
-    def generar_claves(self):
-
-        #Genera un par de claves (pública y privada) RSA
-        clave_privada = rsa.generate_private_key(
+    def generar_nuevas_claves(self):
+        """Genera un nuevo par de claves RSA"""
+        self.clave_privada = rsa.generate_private_key(
             public_exponent=65537,
             key_size=2048
         )
-        clave_publica = clave_privada.public_key()
-        return clave_publica, clave_privada
+        self.clave_publica = self.clave_privada.public_key()
 
-    def cifrar_mensaje(self, mensaje):
-    
-        #Cifra el mensaje ingresado utilizando la clave pública proporcionada
+    def obtener_clave_publica(self):
+        """Retorna la clave pública"""
+        return self.clave_publica
+
+    def cifrar_mensaje(self, mensaje, clave_publica_destino):
+        """Cifra el mensaje usando la clave pública del destinatario"""
         try:
-            mensaje_cifrado = self.clave_publica.encrypt(
+            mensaje_cifrado = clave_publica_destino.encrypt(
                 mensaje.encode(),
                 padding.OAEP(
                     mgf=padding.MGF1(algorithm=hashes.SHA256()),
@@ -31,24 +30,22 @@ class CifradorExtremoAExtremo:
                     label=None
                 )
             )
-            return mensaje_cifrado.hex()
-        
+            return base64.b64encode(mensaje_cifrado).decode('utf-8')
         except Exception as e:
-            raise ValueError(f"Error al cifrar el mensaje: {e}")
+            raise ValueError(f"Error al cifrar el mensaje: {str(e)}")
 
     def descifrar_mensaje(self, mensaje_cifrado):
-
-        #Descifra el mensaje cifrado utilizando la clave privada proporcionada
+        """Descifra el mensaje usando la clave privada propia"""
         try:
+            mensaje_bytes = base64.b64decode(mensaje_cifrado)
             mensaje_descifrado = self.clave_privada.decrypt(
-                bytes.fromhex(mensaje_cifrado),
+                mensaje_bytes,
                 padding.OAEP(
                     mgf=padding.MGF1(algorithm=hashes.SHA256()),
                     algorithm=hashes.SHA256(),
                     label=None
                 )
-            ).decode()
-            return mensaje_descifrado
-        
+            )
+            return mensaje_descifrado.decode()
         except Exception as e:
-            raise ValueError(f"Error al descifrar el mensaje: {e}")
+            raise ValueError(f"Error al descifrar el mensaje: {str(e)}")
