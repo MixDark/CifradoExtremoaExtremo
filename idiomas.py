@@ -1,0 +1,162 @@
+idiomas = {
+    'es': {
+        'titulo': "Cifrado de extremo a extremo",
+        'mensaje_a_cifrar': "Mensaje a cifrar:",
+        'cifrar': "Cifrar",
+        'descifrar': "Descifrar",
+        'mensaje_cifrado_enviado': "Mensaje cifrado enviado:",
+        'mensaje_cifrado_recibido': "Mensaje cifrado recibido:",
+        'mensaje_descifrado': "Mensaje descifrado:",
+        'exportar_priv': "Exportar clave privada",
+        'exportar_pub': "Exportar clave pública",
+        'importar_priv': "Importar clave privada",
+        'importar_pub': "Importar clave pública",
+        'cifrar_archivo': "Cifrar archivo",
+        'descifrar_archivo': "Descifrar archivo",
+        'historial': "Historial de mensajes:",
+        'copiar_cifrado': "Copiar cifrado",
+        'pegar_en_recibido': "Pegar en recibido",
+        'copiar_descifrado': "Copiar descifrado",
+        'chat_seguro': "Chat seguro",
+        'gestion_claves': "Gestión de claves",
+        'info_e2e': "Info E2E",
+        'archivos': "Archivos",
+        'info_e2e_contenido': (
+            "<h2>Cifrado de Extremo a Extremo (E2E)</h2>"
+            "<p>El cifrado de extremo a extremo es un sistema de comunicación donde solo los usuarios que se comunican pueden leer los mensajes.</p>"
+            "<b>Características principales:</b><br>"
+            "• Los mensajes se cifran en el dispositivo del remitente<br>"
+            "• Solo se descifran en el dispositivo del receptor<br>"
+            "• Ni siquiera el servidor puede leer los mensajes<br>"
+            "• Utiliza criptografía de clave pública y privada<br><br>"
+            "<b>Proceso de cifrado:</b><br>"
+            "1. Generación de par de claves para cada usuario<br>"
+            "2. Intercambio de claves públicas<br>"
+            "3. Cifrado del mensaje con la clave pública del receptor<br>"
+            "4. Descifrado con la clave privada del receptor<br>"
+        ),
+        'detalles_archivo_cifrado': 'Detalles del archivo cifrado',
+        'detalles_archivo_descifrado': 'Detalles del archivo descifrado',
+        'detalles_archivo_cifrado_en': 'Encrypted file details',
+        'detalles_archivo_descifrado_en': 'Decrypted file details',
+        'idioma_label': 'Idioma:',
+        'rotar_claves': 'Rotar claves',
+        'estado_claves_cargadas': 'Estado: Claves cargadas',
+        'archivo_cifrado_title': 'Archivo cifrado',
+        'archivo_descifrado_title': 'Archivo descifrado',
+        'lbl_nombre': 'Nombre',
+        'lbl_ruta': 'Ruta',
+        'lbl_tamano': 'Tamaño',
+        'lbl_creado': 'Creado',
+        'lbl_modificado': 'Modificado',
+        'lbl_tipo': 'Tipo',
+        'lbl_permisos': 'Permisos',
+        'estado_label': 'Estado',
+        'claves_rotadas': 'Claves rotadas correctamente',
+        'exito': 'Éxito',
+        'claves_rotadas_msg': 'Las claves han sido rotadas.',
+        'advertencia': 'Advertencia',
+        'ingrese_mensaje': 'Por favor ingrese un mensaje.',
+        'msg_original': 'Mensaje original',
+        'msg_cifrado': 'Cifrado',
+        'msg_descifrado': 'Mensaje descifrado',
+        'info_claves': 'Información de las claves',
+        'huella_digital': 'Huella digital (SHA-256)',
+        'tamano_clave': 'Tamaño de clave',
+        'seguridad_estado': 'Estado de seguridad',
+        'seguridad_alta': 'Alta (2048 bits)',
+        'seguridad_ninguna': 'Ninguna',
+        'clave_publica_vista': 'Vista previa pública',
+        'fecha_generacion': 'Fecha de generación',
+        'exponente_publico': 'Exponente público (e)',
+        'formato_clave': 'Formato',
+        'mensajes_procesados': 'Mensajes procesados',
+        'consejo_seguridad': 'Consejo de seguridad',
+        'tip_rotacion': 'Se recomienda rotar las claves periódicamente para máxima seguridad.',
+        'algoritmo_hash': 'Hash de relleno',
+        'esquema_relleno': 'Esquema de relleno',
+        'archivos_procesados': 'Archivos procesados',
+        'tiempo_sesion': 'Tiempo de sesión',
+        'minutos': 'min',
+    },
+    'en': {
+        'titulo': "End-to-End Encryption",
+        'mensaje_a_cifrar': "Message to encrypt:",
+        'cifrar': "Encrypt",
+        'descifrar': "Decrypt",
+        'mensaje_cifrado_enviado': "Encrypted message sent:",
+        'mensaje_cifrado_recibido': "Encrypted message received:",
+        'mensaje_descifrado': "Decrypted message:",
+        'exportar_priv': "Export private key",
+        'exportar_pub': "Export public key",
+        'importar_priv': "Import private key",
+        'importar_pub': "Import public key",
+        'cifrar_archivo': "Encrypt file",
+        'descifrar_archivo': "Decrypt file",
+        'historial': "Message history:",
+        'copiar_cifrado': "Copy encrypted",
+        'pegar_en_recibido': "Paste to received",
+        'copiar_descifrado': "Copy decrypted",
+        'chat_seguro': "Secure chat",
+        'gestion_claves': "Key management",
+        'info_e2e': "E2E Info",
+        'archivos': "Files",
+        'info_e2e_contenido': (
+            "<h2>End-to-End Encryption (E2E)</h2>"
+            "<p>End-to-end encryption is a communication system where only the users who communicate can read the messages.</p>"
+            "<b>Main features:</b><br>"
+            "• Messages are encrypted on the sender's device<br>"
+            "• Only decrypted on the receiver's device<br>"
+            "• Not even the server can read the messages<br>"
+            "• Uses public and private key cryptography<br><br>"
+            "<b>Encryption process:</b><br>"
+            "1. Key pair generation for each user<br>"
+            "2. Public key exchange<br>"
+            "3. Message encryption with receiver's public key<br>"
+            "4. Decryption with receiver's private key<br>"
+        ),
+        'detalles_archivo_cifrado': 'Encrypted file details',
+        'detalles_archivo_descifrado': 'Decrypted file details',
+        'detalles_archivo_cifrado_en': 'Encrypted file details',
+        'detalles_archivo_descifrado_en': 'Decrypted file details',
+        'idioma_label': 'Language:',
+        'rotar_claves': 'Rotate keys',
+        'estado_claves_cargadas': 'Status: Keys loaded',
+        'archivo_cifrado_title': 'Encrypted file',
+        'archivo_descifrado_title': 'Decrypted file',
+        'lbl_nombre': 'Name',
+        'lbl_ruta': 'Path',
+        'lbl_tamano': 'Size',
+        'lbl_creado': 'Created',
+        'lbl_modificado': 'Modified',
+        'lbl_tipo': 'Type',
+        'lbl_permisos': 'Permissions',
+        'estado_label': 'State',
+        'claves_rotadas': 'Keys rotated successfully',
+        'exito': 'Success',
+        'claves_rotadas_msg': 'Keys have been rotated.',
+        'advertencia': 'Warning',
+        'ingrese_mensaje': 'Please enter a message.',
+        'msg_original': 'Original message',
+        'msg_cifrado': 'Encrypted',
+        'msg_descifrado': 'Decrypted message',
+        'info_claves': 'Key Information',
+        'huella_digital': 'Fingerprint (SHA-256)',
+        'tamano_clave': 'Key size',
+        'seguridad_estado': 'Security state',
+        'seguridad_alta': 'High (2048 bits)',
+        'seguridad_ninguna': 'None',
+        'clave_publica_vista': 'Public preview',
+        'fecha_generacion': 'Generation date',
+        'exponente_publico': 'Public exponent (e)',
+        'formato_clave': 'Format',
+        'mensajes_procesados': 'Messages processed',
+        'consejo_seguridad': 'Security tip',
+        'tip_rotacion': 'Periodic key rotation is recommended for maximum security.',
+        'algoritmo_hash': 'Padding Hash',
+        'esquema_relleno': 'Padding Scheme',
+        'archivos_procesados': 'Files processed',
+        'tiempo_sesion': 'Session time',
+        'minutos': 'min',
+    }
+}
